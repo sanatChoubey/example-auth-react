@@ -18,6 +18,12 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          Login
+        </div>
+        <div>
+          protected
+        </div>
       </header>
     </div>
   );

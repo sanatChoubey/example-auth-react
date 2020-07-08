@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Routehandler from './container/index'
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import AuthContext from './component/AuthContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthContext.Provider value={localStorage.token}>
+      <Router>
+        <Routehandler/>
+      </Router>
+    </AuthContext.Provider>
+    
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
